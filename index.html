@@ -7,12 +7,19 @@
     <script src="/main.js"></script>
     <link rel="stylesheet" href="/style.css">
 </head>
-<body onerror="alert(event)" onload="load()">
+<body onerror="alert(event)">
     <center>
         <h1>GaTM Physics Simulation</h1>
+        <p>Due to some technical limitations, collision detection might be inaccurate at larger masses.</p>
         <canvas width="500" height="300" id="main"></canvas>
-        <p>Collisions: <span id="counter">0</span></p>
-        <a href="/"><button>[- RESET -]</button></a>
+        <p>Collisions: <span id="counter">Press 'start simulation' to view...</span></p>
+
+        m = <input placeholder="1" type="number" disabled> kg<br><br>
+        M = <input placeholder="10" type="number" id="M"> kg<br><br>
+        <button onclick="load(); this.disabled = true">START SIMULATION</button>
+        <br><br><hr style="width: 50%;"><br>
+
+        <a href="/"><button>RESET</button></a>
     </center>
 </body>
 </html>
