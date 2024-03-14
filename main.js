@@ -2,8 +2,8 @@ let canvas;
 let ctx;
 let collisions_counter;
 
-const BLOCK_RADIUS_METERS = 0.5;
-const PIXELS_PER_METER = 50.0;
+const BLOCK_RADIUS_METERS = 1;
+const PIXELS_PER_METER = 20.0;
 
 const WIDTH_PIXELS = 500;
 const HEIGHT_PIXELS = 300;
@@ -66,7 +66,7 @@ function update() {
     BLOCK_RADIUS_METERS * PIXELS_PER_METER * 2, BLOCK_RADIUS_METERS * PIXELS_PER_METER * 2);
     
     ctx.fillStyle = "#eee";
-    ctx.fillText(`v = ${Math.round(vm * 100) / 100} m/s²`, dm * PIXELS_PER_METER, HEIGHT_PIXELS - BLOCK_RADIUS_METERS * PIXELS_PER_METER * 3);
+    ctx.fillText(`v = ${Math.round(vm * 100) / 100} m/s`, dm * PIXELS_PER_METER, HEIGHT_PIXELS - BLOCK_RADIUS_METERS * PIXELS_PER_METER * 3);
     ctx.fillText(`m = ${m} kg`, dm * PIXELS_PER_METER, HEIGHT_PIXELS - BLOCK_RADIUS_METERS * PIXELS_PER_METER * 3 - 20);
     
     ctx.font = "12px mono";
@@ -77,6 +77,6 @@ function update() {
     BLOCK_RADIUS_METERS * PIXELS_PER_METER * 2, BLOCK_RADIUS_METERS * PIXELS_PER_METER * 2);
 
     ctx.fillStyle = "#eee";
-    ctx.fillText(`v = ${Math.round(vM * 100) / 100} m/s²`, dM * PIXELS_PER_METER, HEIGHT_PIXELS - BLOCK_RADIUS_METERS * PIXELS_PER_METER * 3);
+    ctx.fillText(`v = ${Math.round(vM * 100) / 100} m/s`, dM * PIXELS_PER_METER, HEIGHT_PIXELS - BLOCK_RADIUS_METERS * PIXELS_PER_METER * 3);
     ctx.fillText(`M = ${M} kg`, dM * PIXELS_PER_METER, HEIGHT_PIXELS - BLOCK_RADIUS_METERS * PIXELS_PER_METER * 3 - 20);
 }
