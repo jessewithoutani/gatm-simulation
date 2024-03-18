@@ -3,7 +3,7 @@ let ctx;
 let collisions_counter;
 
 const BLOCK_RADIUS_METERS = 1;
-const PIXELS_PER_METER = 20.0;
+const PIXELS_PER_METER = 40.0;
 
 const WIDTH_PIXELS = 500;
 const HEIGHT_PIXELS = 300;
@@ -38,7 +38,9 @@ function update() {
     const alpha = M / m;
 
     dm += vm * sim_delta;
+    // dm = Math.min(Math.max(0, dm), dM - BLOCK_RADIUS_METERS * 2)
     dM += vM * sim_delta;
+    // dM = Math.max(dm + BLOCK_RADIUS_METERS * 2, dM)
 
     const wall_collision = dm <= 0;
     if (wall_collision) { // If small mass hits wall, rebound (large mass won't ever hit it lol)

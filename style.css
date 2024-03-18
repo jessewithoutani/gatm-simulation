@@ -6,6 +6,8 @@ body {
 
 canvas {
     background: #333;
+    border-left: 10px solid #666;
+    border-bottom: 20px solid #666;
     color: #1864e7;
 }
 
